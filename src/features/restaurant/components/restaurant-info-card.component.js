@@ -39,8 +39,8 @@ const RestaurantInfoCard = ({ restaurant = {} }) => {
           style={{ flexDirection: "row", justifyContent: "space-between" }}
         >
           <Rating>
-            {ratingArray.map(() => {
-              return <SvgXml xml={star} width={20} height={20} />;
+            {ratingArray.map((item, index) => {
+              return <SvgXml key={index} xml={star} width={20} height={20} />;
             })}
           </Rating>
           <SectionEnd>
